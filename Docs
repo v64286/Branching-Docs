@@ -1,0 +1,66 @@
+```
+# Developer Git Standards
+
+## PR standards:
+### 24 Hour Cool down:
+A PR can be merged if and only if one of the three scenarios are true:
+
+- The PR has been open for 24 hours and has 2+ approvals 
+- The PR has a majority of Developers in MAP Org for approvals. 
+- EX: 8 code contributors (including self) requires 4+ approvals.
+- EX: 7 code contributors (including self) requires 4+ approvals.
+- PR is a small/quick bugfix and has 2+ approvals (and has an open incident ticket)
+
+
+*Note:* A code contributor is anyone who has make a commit within the last month - title agnostic
+
+### PR Descriptions:
+The PR should have a description of what's on it so it's understandable for someone without a deep context of what's going on with the project. Please use the template and remove any of the default information that is not required for your PR.
+
+- Add 'Labels' on each PR. Enhancement, Bug etc... This will make it easier when going back in time through old PR's
+- If the PR is considered 'large' either with lines of code, or complexity, we encourage a mini PR review meeting with someone on the PR panel to help speed up the review time.
+- 1 PR per story
+- Require code owners to review → TODO: we want to have PR 'on call list' that will rotate weekly to ensure the same few devs aren't the only reviewers. We can filter on extension. IE: .tf files we have our DevOps developer required for any PR.
+### EX:
+    Type of Change:
+
+              [x] Bug fix (non-breaking change which fixes an issue)
+
+              [x] New feature (non-breaking change which adds functionality)
+
+    Jira story/task references:
+
+    Summary:
+
+              Cache load Lamba: add a cache for the MDM Master data, and a lambda that loads it every 24h
+
+              Bugfix: XXX cause of the bug XXX solution
+
+              Refactor to archieve XXX
+
+    How has this been Tested?:
+
+              Unit tested
+
+              Manual integration tests in EAP DEV
+
+              Automated SmokeTests in EAP DEV
+
+    Additional Information:
+
+              In hacky.py I hacked XYZ. We need to improve upon this at a later time.
+
+
+
+## Commit Messages:
+Have your Jira ticket (if applicable) in the commit message.
+
+- EX:  "AFONE-123: I did some awesome stuff. Also, Kai is really cool guy."
+
+## Branch Names:
+New standards will be one of the below after voting is completed. As of now, either option would be accepted.
+
+1)      ${identifier}/${jira ticket}
+
+2)      DAM standards - ${jira ticket}/${description}
+```
